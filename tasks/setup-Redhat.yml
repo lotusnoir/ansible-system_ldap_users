@@ -1,0 +1,5 @@
+---
+- name: REDHAT | Ensure sudo package is installed
+  dnf:
+    name: sudo
+    state: present

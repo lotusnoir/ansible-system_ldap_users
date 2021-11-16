@@ -1,0 +1,6 @@
+---
+- name: DEBIAN | Ensure sudo package is installed
+  package:
+    name: sudo
+    state: present
+    update_cache: true
