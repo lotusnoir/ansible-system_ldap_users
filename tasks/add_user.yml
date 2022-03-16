@@ -11,6 +11,8 @@
   shell: |
     set -o pipefail
     /usr/bin/ldapsearch -o ldif-wrap=no -x -h "{{ users_ldap_host }}" -b "{{ users_ldap_binddn }}" -D "{{ users_ldap_user }}" -w "{{ users_ldap_pwd }}" '(&(objectClass={{ users_ldap_class }})(uid='"{{ item.name }}"'))' '{{ users_ldap_ssh_field }}' | grep "^{{ users_ldap_ssh_field }}"
+  args:
+    executable: /usr/bin/bash
   delegate_to: localhost
   run_once: true
   register: ssh_keys
