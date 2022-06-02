@@ -1,6 +1,6 @@
 ---
 - name: DEBIAN | Ensure sudo package is installed
-  package:
+  ansible.builtin.package:
     name: sudo
     state: present
     update_cache: true
