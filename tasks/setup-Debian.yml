@@ -4,3 +4,7 @@
     name: sudo
     state: present
     update_cache: true
+  register: pkg_result
+  retries: 12
+  delay: 10
+  until: pkg_result is success

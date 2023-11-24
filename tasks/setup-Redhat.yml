@@ -3,3 +3,7 @@
   ansible.builtin.dnf:
     name: sudo
     state: present
+  register: pkg_result
+  retries: 12
+  delay: 10
+  until: pkg_result is success
