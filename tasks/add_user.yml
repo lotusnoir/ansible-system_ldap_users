@@ -31,6 +31,6 @@
   loop_control:
     loop_var: sshkey
 
-- name: check that password expired is disable
+- name: "Check that password expired is disable"
   ansible.builtin.command: chage -M 99999 "{{ item.name }}"
   changed_when: false
