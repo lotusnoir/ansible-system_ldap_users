@@ -13,6 +13,6 @@ users_groups:
 #  - dev
 #  - readonly
 
-#auth_users:
-#  - { name: "user1", groups: "sudo" }
-#  - { name: "user2", groups: "sudo" }
+# auth_users:
+#   - { name: "user1", groups: "sudo" }
+#   - { name: "user2", groups: "sudo" }
