@@ -22,6 +22,7 @@
 ## Description
 
 Configure users auth from ldap sshkey extract
+
 ## Requirements
 
 none
@@ -39,7 +40,6 @@ See [variables](/defaults/main.yml) for more details.
           gather_facts: true
           roles:
             - role: ansible-system_ldap_users
-
 
 ## License
 
