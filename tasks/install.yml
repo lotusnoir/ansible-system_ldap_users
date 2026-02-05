@@ -1,11 +1,11 @@
 ---
 - name: "Add Redhat tasks"
   ansible.builtin.include_tasks: setup-Redhat.yml
-  when: ansible_os_family == 'Redhat' or ansible_os_family == 'Rocky'
+  when: ansible_facts.os_family == 'Redhat' or ansible_facts.os_family == 'Rocky'
 
 - name: "Add Debian tasks"
   ansible.builtin.include_tasks: setup-Debian.yml
-  when: ansible_os_family == 'Debian'
+  when: ansible_facts.os_family == 'Debian'
 
 - name: "Set passwordless on sudo"
   ansible.builtin.lineinfile:
